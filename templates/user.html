@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% block title %}Simsim{% endblock %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <h5>{{message}}</h5>
+    {% endfor%}
+    {% endif%}
+    {% endwith%}
+<h5> Hi, {{user}}</h5>
+
+<div class=" form-group col-md-4" >
+    <div  class="col-md-5" >
+		<form action="#" method="POST">
+			<div class="form-group">
+				<input type="email" name="email" class="form-control" placeholder="Email"  value="{{email if email}}">
+			</div>
+			<button class="btn btn-primary" type="submit">Save</button>
+		</form>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
