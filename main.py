@@ -11,7 +11,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Set the default life of a session
 # once ready set the following to 15 minutes
-app.permanent_session_lifetime = timedelta(minutes=5)
+app.permanent_session_lifetime = timedelta(minutes=15)
 
 db = SQLAlchemy(app)
 
